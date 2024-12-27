@@ -27,11 +27,13 @@
 <body>
     
     <!-- //////////////////// NAV ///////////////////// -->
-    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 celu-s:justify-evenly">
-        <ul class="flex flex-row items-center ">
-            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm "><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
+    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600
+    celu-s:justify-evenly">
+
+        <ul class="flex flex-row items-center sm:text-lg">
+            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm"><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
             
-            <li class="mx-4 p-2 font-semibold celu-s:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
+            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
                 <ul id="menu" class="absolute hidden bg-white mt-2 -ml-2 border border-black">  <!-- Acomode manualmente el menu para alinearlo -->
                     <li class="btn_menu"><a href="seccionTCG.html?id_tcg=1">MAGIC: THE GATHERING</a></li>
                     <li class="btn_menu"><a href="seccionTCG.html?id_tcg=2">YU-GI-OH</a></li>
@@ -44,10 +46,11 @@
         </ul>
     
         <!-- SUPUESTO LOGO -->
-        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
+        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
 
         <ul class="flex flex-row items-center">
-            <li class="mx-4 h-full flex flex-row items-center celu-s:hidden"> 
+            <li class="mx-4 h-full flex flex-row items-center 
+            celu-s:hidden celu:hidden sm:hidden"> 
                 <div class="flex flex-col h-full"> <!-- Al hacerlo col, se acomoda sola la ul desplegable -->
                 <input class="border-b-2 border-black focus:outline-none" id="input_busqueda" type="text" placeholder=" Buscar"> 
                 <ul class="hidden absolute mt-6 w-48" id="lista_sugerencias"></ul>
@@ -60,6 +63,7 @@
 
     </nav>
 
+
     <!-- //////////////////// SECCION DE PRODUCTOS / DIFERENTES TRADING CARD GAMES ///////////////////// -->
     <main>
 
@@ -67,7 +71,7 @@
         <section class="flex flex-col mt-16">
 
             <!-- LOGO TCG -->
-            <div class="flex justify-center"><img id="logo_seccionTCG" 
+            <div class="flex justify-center my-4"><img id="logo_seccionTCG" 
             class="max-w-64 mt-8" src="img/logo.png" alt="logo de magic: the gathering"></div>
 
 
@@ -87,9 +91,10 @@
 
 
     <!-- //////////////////// FOOTER ///////////////////// -->
-    <footer class="flex flex-row justify-evenly items-start p-8 bg-gray-200 celu-s:flex-wrap">
+    <footer class="flex flex-row justify-evenly items-start p-8 bg-gray-200 
+    celu-s:flex-wrap celu:flex-wrap">
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col justify-start p-4 celu:w-1/2">
             <h3 class="font-bold text-xl">Categorías</h3>
             <ul>    <!-- Van a haber tantos li como enlaces termine creando en la página -->
                 <li class="btn_footer"><a href="seccionTCG.html?id_tcg=1">Magic: the Gathering</a></li>
@@ -102,17 +107,17 @@
         </div>
 
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col justify-start p-4 celu:w-1/2">
             <h3 class="font-bold text-xl">Contacto</h3>
             <ul>
-                <li class="btn_footer"><a href="mailto:devalen543@example.com" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a></li>
+                <li class="btn_footer"><a href="mailto:devalen543@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a></li>
                 <li class="btn_footer"><a href="https://wa.me/5492235314907" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
                 <li class="btn_footer"><a href="#"><i class="fa-solid fa-phone"></i> Telefono Fijo</a></li>
                 <li class="btn_footer"><a href="#ubicacion"><i class="fa-solid fa-location-dot"></i> Dirección</a></li>
             </ul>
         </div>
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col justify-start p-4 celu:w-1/2">
             <h3 class="font-bold text-xl">FAQ</h3>
             <ul>    
                 <li class="btn_footer"><a href="#">Garantía de Calidad</a></li>
@@ -123,7 +128,7 @@
         </div>
 
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col justify-start p-4 celu:w-1/2">
             <h3 class="font-bold text-xl">Redes</h3>
             <ul>    
                 <li class="btn_footer"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
@@ -138,7 +143,5 @@
 
     <script src="script.js"></script>
 </body>
-
-
 
 </html>
