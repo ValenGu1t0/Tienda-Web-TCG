@@ -29,12 +29,13 @@
 <body>
 
     <!-- //////////////////// NAV ///////////////////// -->
-    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 celu-s:justify-evenly">
+    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600
+    celu-s:justify-evenly">
 
-        <ul class="flex flex-row items-center ">
-            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm "><a href="#novedades" class="hover:text-orange-500">NOVEDADES</a></li>
+        <ul class="flex flex-row items-center sm:text-lg">
+            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm"><a href="#novedades" class="hover:text-orange-500">NOVEDADES</a></li>
             
-            <li class="mx-4 p-2 font-semibold celu-s:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
+            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
                 <ul id="menu" class="absolute hidden bg-white mt-2 -ml-2 border border-black">  <!-- Acomode manualmente el menu para alinearlo -->
                     <li class="btn_menu"><a href="seccionTCG.html?id_tcg=1">MAGIC: THE GATHERING</a></li>
                     <li class="btn_menu"><a href="seccionTCG.html?id_tcg=2">YU-GI-OH</a></li>
@@ -47,10 +48,11 @@
         </ul>
     
         <!-- SUPUESTO LOGO -->
-        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
+        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
 
         <ul class="flex flex-row items-center">
-            <li class="mx-4 h-full flex flex-row items-center celu-s:hidden"> 
+            <li class="mx-4 h-full flex flex-row items-center 
+            celu-s:hidden celu:hidden sm:hidden"> 
                 <div class="flex flex-col h-full"> <!-- Al hacerlo col, se acomoda sola la ul desplegable -->
                 <input class="border-b-2 border-black focus:outline-none" id="input_busqueda" type="text" placeholder=" Buscar"> 
                 <ul class="hidden absolute mt-6 w-48" id="lista_sugerencias"></ul>
@@ -63,6 +65,7 @@
 
     </nav>
     
+
     <!-- //////////////////// MAIN ///////////////////// -->
     <main>
 
@@ -71,38 +74,41 @@
 
 
         <!-- /////////////////////////////////// PRESENTACION /////////////////////////////////// -->
-        <section class="flex flex-row my-6 p-4 w-full celu-s:flex-col">
-            <div class="flex flex-col p-8 w-1/2 text-justify celu-s:w-full celu-s:justify-center">
-            <div class="flex flex-row justify-start items-center"><img id="ubicacion" class="mr-4 max-w-14 celu-s:hidden" src="img/d20.png" alt="icono pagina"><h2 class="h2 text-3xl font-bold">Somos Cartones y Mazmorras</h2></div>
-            <p class="mt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptate cum odio sunt deserunt obcaecati placeat cupiditate culpa eum excepturi ullam ab unde, doloremque delectus minima nihil. Cum, aliquid facere? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptas corrupti deserunt quod quas explicabo quidem id voluptates, nostrum repellendus a doloremque mollitia laborum magni similique distinctio quae, voluptate numquam!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis incidunt, quasi est molestias suscipit voluptatibus vero. Laborum praesentium sit consectetur dicta accusamus in deleniti asperiores doloremque, aspernatur facilis magnam provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat labore vel consectetur quo excepturi et veniam blanditiis architecto illo, magnam repellendus eum tenetur officiis unde aut nostrum libero dicta.</p>
+        <section class="flex flex-row my-6 p-4 w-full 
+        celu-s:flex-col celu:flex-col sm:flex-col">
+            <div class="flex flex-col p-8 w-1/2 text-justify 
+            celu-s:w-full celu-s:justify-center celu:w-full celu:justify-center sm:w-full sm:justify-center">
+            <div class="flex flex-row justify-start items-center"><img id="ubicacion" class="mr-4 max-w-14 celu-s:hidden celu:hidden" src="img/d20.png" alt="icono pagina"><h2 class="h2 text-3xl font-bold">Somos Cartones y Mazmorras</h2></div>
+            <p class="mt-4">Ubicada en el corazón de Buenos Aires, nuestra tienda nació de la pasión por los juegos y las historias que los unen. Desde hace más de 5 años, hemos sido el punto de encuentro para entusiastas del Trading Card Game y juegos de mesa, creando un espacio donde las estrategias y la diversión cobran vida. Fundada por un grupo de amigos con amor por la cultura geek, nuestra misión siempre ha sido ofrecer no solo los mejores productos, sino también experiencias inolvidables para nuestra comunidad. En nuestra tienda encontrarás una amplia selección de cartas coleccionables, juegos de mesa para todas las edades y niveles, además de un espacio dedicado para torneos y eventos temáticos. Nos enorgullece ser un lugar donde principiantes y expertos se sienten como en casa. Ya sea que busques expandir tu colección, aprender un nuevo juego o simplemente disfrutar una tarde entre amigos, estamos aquí para ayudarte a crear recuerdos épicos.</p>
             </div>
-            <img class="w-1/2 celu-s:w-full" src="img/maps.jpeg" alt="mapa lugar">
+            <img class="w-1/2 celu-s:w-full celu:w-full sm:w-full" src="img/maps.jpeg" alt="mapa lugar">
         </section>
 
 
         <!-- /////////////////////////////////// INFORMACION /////////////////////////////////// -->
-        <section class="flex flex-row my-4 p-8 bg-gray-200 items-center celu-s:flex-col">
+        <section class="flex flex-row my-4 p-8 bg-gray-200 items-center justify-center
+        celu-s:flex-col celu:flex-col sm:flex-wrap">
             
             <div class="flex flex-row p-2 w-1/4 items-center 
-            celu-s:w-full celu-s:justify-between">
+            celu-s:w-full celu:w-full sm:w-1/2">
                 <img class="max-w-20 celu-s:max-w-12" src="img/envios.png" alt="envios">
                 <div class="flex flex-col p-4"><h3 class="font-bold text-lg celu-s:text-sm">Envíos</h3><p class="celu-s:text-sm">Envíos a todo el mundo vía Correo Argentino</p></div>
             </div>
 
             <div class="flex flex-row p-2 w-1/4 items-center 
-            celu-s:w-full">
+            celu-s:w-full celu:w-full sm:w-1/2">
                 <img class="max-w-20 celu-s:max-w-12" src="img/credit.png" alt="envios">
                 <div class="flex flex-col p-4"><h3 class="font-bold text-lg celu-s:text-sm">Pagos</h3><p class="celu-s:text-sm">Pagá con Crédito o Débito mediante MercadoPago</p></div>
             </div>
 
             <div class="flex flex-row p-2 w-1/4 items-center 
-            celu-s:w-full">
+            celu-s:w-full celu:w-full sm:w-1/2">
                 <img class="max-w-20 celu-s:max-w-12" src="img/seguridad.png" alt="envios">
                 <div class="flex flex-col p-4"><h3 class="font-bold text-lg celu-s:text-sm">Seguridad</h3><p class="celu-s:text-sm">Las transacciones de todo el sitio son 100% Seguras</p></div>
             </div>
 
             <div class="flex flex-row p-2 w-1/4 items-center 
-            celu-s:w-full">
+            celu-s:w-full celu:w-full sm:w-1/2">
                 <img class="max-w-20 celu-s:max-w-12" src="img/devolucion.png" alt="envios">
                 <div class="flex flex-col p-4"><h3 class="font-bold text-lg celu-s:text-sm">Devoluciones</h3><p class="celu-s:text-sm">¿No te llegó lo que esperabas? ¡Contactanos!</p></div>
             </div>
@@ -112,7 +118,11 @@
         <!-- /////////////////////////////////// NOVEDADES /////////////////////////////////// -->
         <section class="flex flex-col my-8">
             <h2 class="font-bold text-3xl text-center">¡NOVEDADES!</h2>
-            <div class="flex flex-row wrap p-4 gap-6 my-4 celu-s:flex-col" id="novedades">
+            <!-- MODIFICAR CLASE card en JS para cada tamaño de pantalla / esto es solo el contenedor -->
+            <div class="flex flex-row flex-nowrap p-4 gap-6 my-4 
+            celu-s:flex-col celu:flex-wrap celu:gap-0 celu:text-base    
+            sm:flex-wrap sm:gap-0"  
+            id="novedades">
             <!-- Aca se crean cards automaticamente en base a los productos que menos stock tienen - osea los que mas se vendieron -->
             </div>
         </section>
@@ -121,19 +131,24 @@
         <!-- /////////////////////////////////// MAS VENDIDOS /////////////////////////////////// -->
         <section class="flex flex-col my-8">
             <h2 class="font-bold text-3xl text-center">¡LOS MAS VENDIDOS!</h2>
-            <div class="flex flex-row wrap p-4 gap-6 my-4 celu-s:flex-col" id="mas_vendidos">
+            <div class="flex flex-row flex-nowrap p-4 gap-6 my-4 
+            celu-s:flex-col celu:flex-wrap celu:gap-0 celu:text-base
+            sm:flex-wrap sm:gap-0" 
+            id="mas_vendidos">
             <!-- Aca se crean cards automaticamente en base a los productos que menos stock tienen - osea los que mas se vendieron -->
             </div>
         </section>
 
     </main>
 
-    <!-- //////////////////// FOOTER ///////////////////// -->
-    <footer class="flex flex-row justify-evenly items-start p-8 bg-gray-200 celu-s:flex-wrap">
 
-        <div class="flex flex-col justify-start p-4">
+    <!-- //////////////////// FOOTER ///////////////////// -->
+    <footer class="flex flex-row justify-evenly p-8 bg-gray-200 
+    celu-s:flex-wrap celu:flex-wrap">
+
+        <div class="flex flex-col p-4 celu-s:w-1/2 celu:w-1/2">
             <h3 class="font-bold text-xl">Categorías</h3>
-            <ul>    <!-- Van a haber tantos li como enlaces termine creando en la página -->
+            <ul>
                 <li class="btn_footer"><a href="seccionTCG.html?id_tcg=1">Magic: the Gathering</a></li>
                 <li class="btn_footer"><a href="seccionTCG.html?id_tcg=2">YuGiOh</a></li>
                 <li class="btn_footer"><a href="seccionTCG.html?id_tcg=3">Pokemon TCG</a></li>
@@ -144,17 +159,17 @@
         </div>
 
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col p-4 celu-s:w-1/2 celu:w-1/2">
             <h3 class="font-bold text-xl">Contacto</h3>
             <ul>
-                <li class="btn_footer"><a href="mailto:devalen543@example.com" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a></li>
+                <li class="btn_footer"><a href="mailto:devalen543@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a></li>
                 <li class="btn_footer"><a href="https://wa.me/5492235314907" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
                 <li class="btn_footer"><a href="#"><i class="fa-solid fa-phone"></i> Telefono Fijo</a></li>
                 <li class="btn_footer"><a href="#ubicacion"><i class="fa-solid fa-location-dot"></i> Dirección</a></li>
             </ul>
         </div>
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col p-4 celu-s:w-1/2 celu:w-1/2">
             <h3 class="font-bold text-xl">FAQ</h3>
             <ul>    
                 <li class="btn_footer"><a href="#">Garantía de Calidad</a></li>
@@ -165,7 +180,7 @@
         </div>
 
 
-        <div class="flex flex-col justify-start p-4">
+        <div class="flex flex-col p-4 celu-s:w-1/2 celu:w-1/2">
             <h3 class="font-bold text-xl">Redes</h3>
             <ul>    
                 <li class="btn_footer"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
