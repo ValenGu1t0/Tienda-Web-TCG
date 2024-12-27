@@ -285,7 +285,12 @@ function card(el, seccion) {                // Recibe como parametros los elemen
 
     // Recibe un el. del forEach y crea una card para el, donde cada el. es un producto que coincide con la busqueda:
     const card = document.createElement('div'); 
-    card.classList.add('card', 'flex', 'flex-col', 'w-1/4', 'items-center', 'rounded-xl', 'p-4', 'celu-s:w-full');
+    card.classList.add('card', 'flex', 'flex-col', 'w-1/4', 'items-center', 'rounded-xl', 'p-4', 
+        
+        'celu-s:w-full',
+        'celu:w-1/2',
+        'sm:w-1/2'
+    );
     seccionCards.appendChild(card);
 
 
@@ -326,7 +331,7 @@ function card(el, seccion) {                // Recibe como parametros los elemen
 
     // Caja para botones
     const divBotonesCards = document.createElement('div');
-    divBotonesCards.classList.add('botones_cards', 'flex', 'flex-row', 'w-full', 'p-1', 'justify-evenly', 'items-center', 'px-2', 'my-2', 'gap-2');
+    divBotonesCards.classList.add('botones_cards', 'flex', 'flex-row-reverse', 'w-full', 'p-1', 'justify-evenly', 'items-center', 'px-2', 'my-2', 'gap-2');
     card.appendChild(divBotonesCards);
 
 
