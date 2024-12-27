@@ -599,16 +599,8 @@ video {
   margin-left: -0.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .mr-4 {
@@ -711,12 +703,20 @@ video {
   flex-direction: row;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .items-start {
@@ -778,6 +778,11 @@ video {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-orange-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 88 12 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -964,6 +969,45 @@ video {
   outline-offset: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:max-w-full {
+    max-width: 100%;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:gap-0 {
+    gap: 0px;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 425px) {
   .celu-s\:ml-0 {
     margin-left: 0px;
@@ -973,12 +1017,20 @@ video {
     display: none;
   }
 
+  .celu-s\:w-1\/2 {
+    width: 50%;
+  }
+
   .celu-s\:w-full {
     width: 100%;
   }
 
   .celu-s\:max-w-12 {
     max-width: 3rem;
+  }
+
+  .celu-s\:max-w-full {
+    max-width: 100%;
   }
 
   .celu-s\:flex-col {
@@ -993,20 +1045,56 @@ video {
     justify-content: center;
   }
 
-  .celu-s\:justify-between {
-    justify-content: space-between;
-  }
-
   .celu-s\:justify-evenly {
     justify-content: space-evenly;
   }
 
-  .celu-s\:border-2 {
-    border-width: 2px;
+  .celu-s\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .celu-s\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 639px) {
+  .celu\:hidden {
+    display: none;
+  }
+
+  .celu\:w-1\/2 {
+    width: 50%;
+  }
+
+  .celu\:w-full {
+    width: 100%;
+  }
+
+  .celu\:max-w-full {
+    max-width: 100%;
+  }
+
+  .celu\:flex-col {
+    flex-direction: column;
+  }
+
+  .celu\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .celu\:justify-center {
+    justify-content: center;
+  }
+
+  .celu\:gap-0 {
+    gap: 0px;
+  }
+
+  .celu\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
