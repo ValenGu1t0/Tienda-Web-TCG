@@ -36,10 +36,10 @@ Desde ahi, modifico el elemento que desee (caputandolo con getElementById previa
 
 if (prod) { 
 
-    tituloProducto.innerText = prod.nombre_producto;
-    precioProducto.innerText = `$${prod.precio_producto}`;      // Podria setear el value=""
-    stockProducto.innerHTML = `Stock: ${prod.stock_producto}`;
-    imagenProducto.src = prod.imagen_producto;          // Swapeo el src de img  dependiendo el producto -> interesante como accede al contenido de la propiedad sin preguntar nada, solo con la propiedad
+    tituloProducto.innerText = prod.nombre_producto;            // Se genera la card con los atributos de los productos
+    precioProducto.innerText = `$${prod.precio_producto}`;      // Muestra su precio, por ejemplo..
+    stockProducto.innerHTML = `Stock: ${prod.stock_producto}`;  // El stock que tiene..
+    imagenProducto.src = prod.imagen_producto;                  // La imagen asociada a ese producto también
 }
 
 
