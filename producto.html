@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Fuentes: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartones y Mazmorras - Tienda Online</title>
+
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="img/d20.png" type="image/x-icon">
+</head>
+
+
+
+<body>
+    
+    <!-- //////////////////// NAV ///////////////////// -->
+    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 celu-s:justify-evenly">
+
+        <ul class="flex flex-row items-center ">
+            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:border-2 celu-s:text-sm"><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
+            <li class="mx-4 p-2 font-semibold celu-s:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
+                <ul id="menu" class="absolute hidden bg-white mt-2 -ml-2 border border-black">  <!-- Acomode manualmente el menu para alinearlo -->
+                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=1">MAGIC: THE GATHERING</a></li>
+                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=2">YU-GI-OH</a></li>
+                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=3">POKEMON TCG</a></li>
+                    <li class="btn_menu"><a href="">ONE PIECE TCG (SOON)</a></li>
+                    <li class="btn_menu"><a href="">ACCESORIOS</a></li>
+                    <li class="btn_menu"><a href="">JUEGOS DE MESA</a></li>
+                </ul>
+            </li>
+        </ul>
+    
+        <!-- SUPUESTO LOGO -->
+        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
+
+        <ul class="flex flex-row items-center celu-s:border-2">
+            <li class="mx-4 h-full flex flex-row items-center celu-s:hidden"> 
+                <div class="flex flex-col h-full"> <!-- Al hacerlo col, se acomoda sola la ul desplegable -->
+                <input class="border-b-2 border-black focus:outline-none" id="input_busqueda" type="text" placeholder=" Buscar"> 
+                <ul class="hidden absolute mt-6 w-48" id="lista_sugerencias"></ul>
+                </div>
+                <i class="fa-solid fa-magnifying-glass ml-2 text-xl"></i>
+            </li>
+            <li class="mx-4"><a href="#"><i class="fa-regular fa-user text-xl hover:text-orange-500"></i></a>   <!-- tengo que agregar el desplegable -->
+            <li class="mx-4"><a href="#"><i class="fa-solid fa-cart-shopping text-xl hover:text-orange-500"></i></a>    <!-- ni hablar de cuando tenga que agregar elm al carrito -->
+        </ul>
+
+    </nav>
+
+    <!-- Plantilla Producto -->
+    <main class="mt-24">
+        <div class="flex flex-row p-4 justify-between">
+            <img id="imagen_producto" class="max-w-1/2 p-8" src="" ></img>
+            <section class="producto_descripcion flex flex-col p-8 text-justify max-w-1/2 border-2 border-black">
+                <h2 id="titulo_producto" class="text-3xl font-bold mb-4"></h2>
+                <p></p>
+                <div class="flex flex-row justify-between items-center mt-4">
+                    <data id="precio_producto" class="text-3xl font-bold"></data> 
+                    <p class="text-2xl font-bold mr-2" id="stock_producto"></p> 
+                </div>
+            </section> 
+        </div>
+    </main>
+
+
+    <!-- //////////////////// FOOTER ///////////////////// -->
+    <footer class="flex flex-row justify-evenly items-start p-8 bg-gray-200 celu-s:flex-wrap">
+
+        <div class="flex flex-col justify-start p-4">
+            <h3 class="font-bold text-xl">Categorías</h3>
+            <ul>    <!-- Van a haber tantos li como enlaces termine creando en la página -->
+                <li class="btn_footer"><a href="seccionTCG.html?id_tcg=1">Magic: the Gathering</a></li>
+                <li class="btn_footer"><a href="seccionTCG.html?id_tcg=2">YuGiOh</a></li>
+                <li class="btn_footer"><a href="seccionTCG.html?id_tcg=3">Pokemon TCG</a></li>
+                <li class="btn_footer"><a href="#">One Piece (Soon)</a></li>
+                <li class="btn_footer"><a href="seccionTCG.html?id_tcg=4">Accesorios TCG</a></li>
+                <li class="btn_footer"><a href="seccionTCG.html?id_tcg=5">Juegos de Mesa</a></li>
+            </ul>
+        </div>
+
+
+        <div class="flex flex-col justify-start p-4">
+            <h3 class="font-bold text-xl">Contacto</h3>
+            <ul>
+                <li class="btn_footer"><a href="mailto:devalen543@example.com" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a></li>
+                <li class="btn_footer"><a href="https://wa.me/5492235314907" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                <li class="btn_footer"><a href="#"><i class="fa-solid fa-phone"></i> Telefono Fijo</a></li>
+                <li class="btn_footer"><a href="#ubicacion"><i class="fa-solid fa-location-dot"></i> Dirección</a></li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col justify-start p-4">
+            <h3 class="font-bold text-xl">FAQ</h3>
+            <ul>    
+                <li class="btn_footer"><a href="#">Garantía de Calidad</a></li>
+                <li class="btn_footer"><a href="#">Metodos de Compra</a></li>
+                <li class="btn_footer"><a href="#">Envíos</a></li>
+                <li class="btn_footer"><a href="#">Otros</a></li>
+            </ul>
+        </div>
+
+
+        <div class="flex flex-col justify-start p-4">
+            <h3 class="font-bold text-xl">Redes</h3>
+            <ul>    
+                <li class="btn_footer"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                <li class="btn_footer"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                <li class="btn_footer"><a href="https://www.x.com/" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                <li class="btn_footer"><a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i> Tik Tok</li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
