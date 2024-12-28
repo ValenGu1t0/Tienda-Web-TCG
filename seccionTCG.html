@@ -27,26 +27,26 @@
 <body>
     
     <!-- //////////////////// NAV ///////////////////// -->
-    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600
-    celu-s:justify-evenly">
+    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600">
 
-        <ul class="flex flex-row items-center sm:text-lg">
-            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm"><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
-            
-            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
+        <ul class="flex flex-row items-center text-lg">
+
+            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
+
+            <li class="mx-4 p-2 font-semibold"><button id="despliegue" class="hover:text-orange-500">SECCIONES</button>
                 <ul id="menu" class="absolute hidden bg-white mt-2 -ml-2 border border-black">  <!-- Acomode manualmente el menu para alinearlo -->
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=1">MAGIC: THE GATHERING</a></li>
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=2">YU-GI-OH</a></li>
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=3">POKEMON TCG</a></li>
-                    <li class="btn_menu"><a href="">ONE PIECE TCG (SOON)</a></li>
-                    <li class="btn_menu"><a href="">ACCESORIOS</a></li>
-                    <li class="btn_menu"><a href="">JUEGOS DE MESA</a></li>
+                    <a href="index.html"><li class="btn_menu">INICIO</li></a>
+                    <a href="seccionTCG.html?id_tcg=1"><li class="btn_menu">MAGIC: THE GATHERING</li></a>
+                    <a href="seccionTCG.html?id_tcg=2"><li class="btn_menu">YU-GI-OH</li></a>
+                    <a href="seccionTCG.html?id_tcg=3"><li class="btn_menu">POKEMON TCG</li></a>
+                    <a href=""><li class="btn_menu">ONE PIECE TCG (SOON)</li></a>
+                    <a href=""><li class="btn_menu">JUEGOS DE MESA</li></a>
                 </ul>
             </li>
         </ul>
     
-        <!-- SUPUESTO LOGO -->
-        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
+        <!-- LOGO -->
+        <a href="index.html"><div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></div></a>
 
         <ul class="flex flex-row items-center">
             <li class="mx-4 h-full flex flex-row items-center 
@@ -62,7 +62,6 @@
         </ul>
 
     </nav>
-
 
     <!-- //////////////////// SECCION DE PRODUCTOS / DIFERENTES TRADING CARD GAMES ///////////////////// -->
     <main>
