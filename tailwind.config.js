@@ -8,16 +8,21 @@ module.exports = {
       screens: {
         'celu-s': { min: '320px', max: '425px' },  // Para el rango entre 320px y 425px
         'celu': { min: '426px', max: '639px'},
-        /*
-        sm	640px	
-        md	768px	
-        lg	1024px	
-        xl	1280px	
-        2xl	1536px 
-        */
+        'sm': { min: '640px', max: '767px'},
+        'md': { min: '768px', max: '1024px' },
+      
       },
     },
   },
   plugins: [],
 
 };
+
+
+ /* Breakpoints
+    sm	640px	
+    md	768px	
+    lg	1024px	
+    xl	1280px	
+    2xl	1536px 
+*/
