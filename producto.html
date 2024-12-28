@@ -28,26 +28,26 @@
 <body>
     
     <!-- //////////////////// NAV ///////////////////// -->
-    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600
-    celu-s:justify-evenly">
+    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600">
 
-        <ul class="flex flex-row items-center sm:text-lg">
-            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm"><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
-            
-            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
+        <ul class="flex flex-row items-center text-lg">
+
+            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><a href="index.html" class="hover:text-orange-500">INICIO</a></li>
+
+            <li class="mx-4 p-2 font-semibold"><button id="despliegue" class="hover:text-orange-500">SECCIONES</button>
                 <ul id="menu" class="absolute hidden bg-white mt-2 -ml-2 border border-black">  <!-- Acomode manualmente el menu para alinearlo -->
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=1">MAGIC: THE GATHERING</a></li>
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=2">YU-GI-OH</a></li>
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=3">POKEMON TCG</a></li>
-                    <li class="btn_menu"><a href="">ONE PIECE TCG (SOON)</a></li>
-                    <li class="btn_menu"><a href="">ACCESORIOS</a></li>
-                    <li class="btn_menu"><a href="">JUEGOS DE MESA</a></li>
+                    <a href="index.html"><li class="btn_menu">INICIO</li></a>
+                    <a href="seccionTCG.html?id_tcg=1"><li class="btn_menu">MAGIC: THE GATHERING</li></a>
+                    <a href="seccionTCG.html?id_tcg=2"><li class="btn_menu">YU-GI-OH</li></a>
+                    <a href="seccionTCG.html?id_tcg=3"><li class="btn_menu">POKEMON TCG</li></a>
+                    <a href=""><li class="btn_menu">ONE PIECE TCG (SOON)</li></a>
+                    <a href=""><li class="btn_menu">JUEGOS DE MESA</li></a>
                 </ul>
             </li>
         </ul>
     
-        <!-- SUPUESTO LOGO -->
-        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
+        <!-- LOGO -->
+        <a href="index.html"><div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></div></a>
 
         <ul class="flex flex-row items-center">
             <li class="mx-4 h-full flex flex-row items-center 
@@ -64,25 +64,32 @@
 
     </nav>
 
-
     <!-- Plantilla Producto -->
     <main class="mt-24">
 
         <div class="flex flex-row p-4 justify-between 
-        celu-s:flex-col celu:flex-col sm:flex-col">
+        celu-s:flex-col celu:flex-col sm:flex-col md:flex-col">
 
             <img id="imagen_producto" class="max-w-1/2 p-8 
-            celu-s:max-w-full celu:max-w-full sm:max-w-full" src=""></img>
+            celu-s:max-w-full celu:max-w-full sm:max-w-full md:max-w-full" src=""></img>
 
             <section class="producto_descripcion max-w-1/2 p-8 flex flex-col gap-6 text-justify border-2 border-black
-            celu-s:max-w-full celu:max-w-full sm:max-w-full">
+            celu-s:max-w-full celu:max-w-full sm:max-w-full md:max-w-full">
 
                 <h2 id="titulo_producto" class="text-3xl font-bold celu-s:text-lg"></h2>
 
-                <div class="flex flex-row justify-between items-center"><data id="precio_producto" class="text-3xl font-bold"></data><p class="text-2xl font-bold" id="stock_producto"></p></div>
+                <div class="flex flex-row justify-between items-center">
+                <data id="precio_producto" class="text-3xl font-bold"></data>
+                <p class="text-2xl font-bold" id="stock_producto"></p>
+                </div>
                 
-                <button class="w-1/2 p-1 border-2 font-bold border-black rounded-3xl hover:bg-orange-400 transition 
-                celu-s:w-full celu:w-full sm:w-full">Carrito</button>
+                <div class="flex flex-row justify-between">
+                <button class="w-1/3 p-1 border-2 border-black font-extrabold rounded-3xl"> - | + </button>
+                <button class="w-1/2 p-1 border-2 border-black font-bold rounded-3xl hover:bg-orange-400 transition 
+                celu-s:w-1/3 celu:w-1/3 sm:w-1/3 md:w-1/3 md:text-lg lg:w-1/3">Carrito</button>
+                </div>
+
+                
             </section> 
 
         </div>
