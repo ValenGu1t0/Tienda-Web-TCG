@@ -289,7 +289,8 @@ function card(el, seccion) {                // Recibe como parametros los elemen
         
         'celu-s:w-full',
         'celu:w-1/2',
-        'sm:w-1/2'
+        'sm:w-1/2',
+        'md:w-1/2'
     );
     seccionCards.appendChild(card);
 
@@ -301,15 +302,17 @@ function card(el, seccion) {                // Recibe como parametros los elemen
     
     
     // Titulo del producto con link (actualizado para que lleve a una seccion)
-    const linkNombreCard = document.createElement('a');
-    linkNombreCard.href = `seccionTCG.html?id_tcg=${el.id_tcg}`;
+    /* const linkNombreCard = document.createElement('a');
+    linkNombreCard.href = `seccionTCG.html?id_tcg=${el.id_tcg}`; */
 
     const nombreCard = document.createElement('h3');                         
     nombreCard.classList.add('text-justify', 'p-4', 'hover:text-orange-500', 'cursor-pointer');
     nombreCard.innerText = el.nombre_producto;
+    
+    card.appendChild(nombreCard);
 
-    linkNombreCard.appendChild(nombreCard);
-    card.appendChild(linkNombreCard);
+    /* linkNombreCard.appendChild(nombreCard);
+    card.appendChild(linkNombreCard); */
 
 
     // Caja para Precio - Stock
@@ -326,7 +329,6 @@ function card(el, seccion) {                // Recibe como parametros los elemen
     stockCard.classList.add('font-semibold', 'text-justify', 'cursor-default', 'hover:text-orange-500');
     stockCard.innerText = `Stock: ${el.stock_producto}`;
     divPrecioStock.appendChild(stockCard);
-    //
 
 
     // Caja para botones
