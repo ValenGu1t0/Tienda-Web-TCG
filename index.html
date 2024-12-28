@@ -29,26 +29,26 @@
 <body>
 
     <!-- //////////////////// NAV ///////////////////// -->
-    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600
-    celu-s:justify-evenly">
+    <nav class="flex flex-row justify-between items-center bg-white py-6 px-6 fixed w-full top-0 border-b-2 border-orange-600">
 
-        <ul class="flex flex-row items-center sm:text-lg">
-            <li class="mx-4 p-2 font-semibold celu-s:ml-0 celu-s:text-sm"><a href="#novedades" class="hover:text-orange-500">NOVEDADES</a></li>
-            
-            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><button id="despliegue" class="hover:text-orange-500">OTROS</button>
+        <ul class="flex flex-row items-center text-lg">
+
+            <li class="mx-4 p-2 font-semibold celu-s:hidden celu:hidden sm:hidden"><a href="#novedades" class="hover:text-orange-500">NOVEDADES</a></li>
+
+            <li class="mx-4 p-2 font-semibold"><button id="despliegue" class="hover:text-orange-500">SECCIONES</button>
                 <ul id="menu" class="absolute hidden bg-white mt-2 -ml-2 border border-black">  <!-- Acomode manualmente el menu para alinearlo -->
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=1">MAGIC: THE GATHERING</a></li>
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=2">YU-GI-OH</a></li>
-                    <li class="btn_menu"><a href="seccionTCG.html?id_tcg=3">POKEMON TCG</a></li>
-                    <li class="btn_menu"><a href="">ONE PIECE TCG (SOON)</a></li>
-                    <li class="btn_menu"><a href="">ACCESORIOS</a></li>
-                    <li class="btn_menu"><a href="">JUEGOS DE MESA</a></li>
+                    <a href="index.html"><li class="btn_menu">INICIO</li></a>
+                    <a href="seccionTCG.html?id_tcg=1"><li class="btn_menu">MAGIC: THE GATHERING</li></a>
+                    <a href="seccionTCG.html?id_tcg=2"><li class="btn_menu">YU-GI-OH</li></a>
+                    <a href="seccionTCG.html?id_tcg=3"><li class="btn_menu">POKEMON TCG</li></a>
+                    <a href=""><li class="btn_menu">ONE PIECE TCG (SOON)</li></a>
+                    <a href=""><li class="btn_menu">JUEGOS DE MESA</li></a>
                 </ul>
             </li>
         </ul>
     
-        <!-- SUPUESTO LOGO -->
-        <div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><a href="#"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></a>   </div>
+        <!-- LOGO -->
+        <a href="index.html"><div class="flex flex-row items-center"><img class="mr-4 max-w-12" src="img/d20.png" alt="icono pagina"><h1 class="text-3xl mt-1 celu-s:hidden celu:hidden" id="h1">Cartones y Mazmorras</h1></div></a>
 
         <ul class="flex flex-row items-center">
             <li class="mx-4 h-full flex flex-row items-center 
@@ -75,13 +75,15 @@
 
         <!-- /////////////////////////////////// PRESENTACION /////////////////////////////////// -->
         <section class="flex flex-row my-6 p-4 w-full 
-        celu-s:flex-col celu:flex-col sm:flex-col">
+        celu-s:flex-col celu:flex-col sm:flex-col md:flex-col">
+
             <div class="flex flex-col p-8 w-1/2 text-justify 
-            celu-s:w-full celu-s:justify-center celu:w-full celu:justify-center sm:w-full sm:justify-center">
+            celu-s:w-full celu-s:justify-center celu:w-full celu:justify-center sm:w-full sm:justify-center md:w-full md:justify-center">
+
             <div class="flex flex-row justify-start items-center"><img id="ubicacion" class="mr-4 max-w-14 celu-s:hidden celu:hidden" src="img/d20.png" alt="icono pagina"><h2 class="h2 text-3xl font-bold">Somos Cartones y Mazmorras</h2></div>
             <p class="mt-4">Ubicada en el corazón de Buenos Aires, nuestra tienda nació de la pasión por los juegos y las historias que los unen. Desde hace más de 5 años, hemos sido el punto de encuentro para entusiastas del Trading Card Game y juegos de mesa, creando un espacio donde las estrategias y la diversión cobran vida. Fundada por un grupo de amigos con amor por la cultura geek, nuestra misión siempre ha sido ofrecer no solo los mejores productos, sino también experiencias inolvidables para nuestra comunidad. En nuestra tienda encontrarás una amplia selección de cartas coleccionables, juegos de mesa para todas las edades y niveles, además de un espacio dedicado para torneos y eventos temáticos. Nos enorgullece ser un lugar donde principiantes y expertos se sienten como en casa. Ya sea que busques expandir tu colección, aprender un nuevo juego o simplemente disfrutar una tarde entre amigos, estamos aquí para ayudarte a crear recuerdos épicos.</p>
             </div>
-            <img class="w-1/2 celu-s:w-full celu:w-full sm:w-full" src="img/maps.jpeg" alt="mapa lugar">
+            <img class="w-1/2 celu-s:w-full celu:w-full sm:w-full md:w-full" src="img/maps.jpeg" alt="mapa lugar">
         </section>
 
 
@@ -120,8 +122,7 @@
             <h2 class="font-bold text-3xl text-center">¡NOVEDADES!</h2>
             <!-- MODIFICAR CLASE card en JS para cada tamaño de pantalla / esto es solo el contenedor -->
             <div class="flex flex-row flex-nowrap p-4 gap-6 my-4 
-            celu-s:flex-col celu:flex-wrap celu:gap-0 celu:text-base    
-            sm:flex-wrap sm:gap-0"  
+            celu-s:flex-col celu:flex-wrap celu:gap-0 celu:text-base sm:flex-wrap sm:gap-0 md:flex-wrap md:gap-0"  
             id="novedades">
             <!-- Aca se crean cards automaticamente en base a los productos que menos stock tienen - osea los que mas se vendieron -->
             </div>
@@ -132,8 +133,7 @@
         <section class="flex flex-col my-8">
             <h2 class="font-bold text-3xl text-center">¡LOS MAS VENDIDOS!</h2>
             <div class="flex flex-row flex-nowrap p-4 gap-6 my-4 
-            celu-s:flex-col celu:flex-wrap celu:gap-0 celu:text-base
-            sm:flex-wrap sm:gap-0" 
+            celu-s:flex-col celu:flex-wrap celu:gap-0 celu:text-base sm:flex-wrap sm:gap-0 md:flex-wrap md:gap-0" 
             id="mas_vendidos">
             <!-- Aca se crean cards automaticamente en base a los productos que menos stock tienen - osea los que mas se vendieron -->
             </div>
